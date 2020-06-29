@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { OmdbApiService } from 'src/app/services/omdb-api.service';
 import { Subject } from 'rxjs';
-import { takeUntil, debounceTime } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { MovieInfoResponse, MovieInfo } from 'src/app/models/movie-info.model';
 
 const noFoundMovieMessage = 'No se encuentran coincidencias con su búsqueda :(';
@@ -35,7 +35,7 @@ export class MoviesComponent implements OnDestroy {
   searchMovieInfo() {
     this.ombdApiService
       .searchMovieInfo(this.searchMovie, this.movieListPage)
-      .pipe(takeUntil(this.destroySubject$), debounceTime(3000))
+      .pipe(takeUntil(this.destroySubject$))
       .subscribe((response: MovieInfoResponse) => {
         this.movieList = response.Search;
         this.totalPage = Math.ceil(Number(response.totalResults) / 10);

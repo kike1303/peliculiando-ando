@@ -25,8 +25,8 @@ El resultado de la prueba se puede ver en el siguiente link -> [Peliculiando-and
 
 ### Notas importantes sobre el proyecto
 
-- El login es netamente mockeado, se puese inciar sesión escribiendo cualquier correo válido y una constraseña cualquiera.
-- Se creó un interceptor el cual a cada petición http simula agregarle un Bearer Token. Sin embargo no se lo agrega de verdad para que la API de OMBD puede responder correctamente.
+- El login es netamente mockeado, se puede iniciar sesión escribiendo cualquier correo válido y una contraseña cualquiera.
+- Se creó un interceptor el cual a cada petición http simula agregarle un Bearer Token. Sin embargo no se lo agrega de verdad para que la API de OMBD pueda responder correctamente.
 - Se usó NRGX para el control de stores en la aplicación. En este proyecto se usa para almacenar las películas favoritas, para saber cuando un modal está abierto o cerrado, para pasar información entre componentes, entre otras cosas.
 - La información del usuario (email y token mockeado) se almacena en el SessionStorage del navegador.
 - La información de las películas favoritas se almacena en el localStorage del navegador.
