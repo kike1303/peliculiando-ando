@@ -1,27 +1,33 @@
-# PeliculiandoAndo
+# Peliculiando-ando
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Prueba técnica GFI - Ditech
 
-## Development server
+El resultado de la prueba se puede ver en el siguiente link -> [Peliculiando-ando](https://peliculiando-ando.web.app/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Dependencias del proyecto
 
-## Code scaffolding
+node versión 12.11.1 o superior -> [descarga node](https://nodejs.org/)
+angular/cli versión 9.1.4 -> [Angular CLI](https://github.com/angular/angular-cli)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instrucciones para despliegue en local
 
-## Build
+1. Nos ubicamos el root del proyecto y ejecutamos `npm install` o `yarn install`.
+2. Ejecutamos `ng serve`.
+3. Abrimos en un navegador la siguiente url `http://localhost:4200/`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Tecnologías usadas
 
-## Running unit tests
+- Angular V9 -> [angular](https://angular.io/docs)
+- Bootstrap 4 -> [bootstrap](https://getbootstrap.com/)
+- PrimeNG -> [primeng](https://www.primefaces.org/primeng/)
+- NGRX -> [ngrx](https://ngrx.io/)
+- Firebase (para el deploy) -> [firebase](https://firebase.google.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Notas importantes sobre el proyecto
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- El login es netamente mockeado, se puese inciar sesión escribiendo cualquier correo válido y una constraseña cualquiera.
+- Se creó un interceptor el cual a cada petición http simula agregarle un Bearer Token. Sin embargo no se lo agrega de verdad para que la API de OMBD puede responder correctamente.
+- Se usó NRGX para el control de stores en la aplicación. En este proyecto se usa para almacenar las películas favoritas, para saber cuando un modal está abierto o cerrado, para pasar información entre componentes, entre otras cosas.
+- La información del usuario (email y token mockeado) se almacena en el SessionStorage del navegador.
+- La información de las películas favoritas se almacena en el localStorage del navegador.
+- Al entrar a la ruta `/my-movies`, el componente buscará un token en el SessionStorage y si no tienes te mandará a la landing principal.
