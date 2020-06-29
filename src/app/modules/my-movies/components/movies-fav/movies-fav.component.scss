@@ -1,0 +1,33 @@
+@import "app.variables";
+
+.movies-fav-container {
+  margin-top: 64px;
+  padding: 64px 15px 0;
+  nav {
+    height: 72px;
+
+    .heart-icon {
+      color: red;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .ui-carousel-item {
+    justify-content: center;
+    display: flex;
+  }
+
+  .movie-fav-card {
+    max-width: 200px;
+    margin: 24px;
+  }
+}
+
+body
+  .ui-carousel
+  .ui-carousel-dots-container
+  .ui-carousel-dot-item.ui-state-highlight
+  .ui-carousel-dot-icon {
+  background-color: $peliculiando-green-light;
+}

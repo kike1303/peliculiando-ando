@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app.variables";
+
+* {
+  font-family: $poppins-regular;
+}
+
+html {
+  background-color: $peliculiando-blue-light;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 180px;
+  box-sizing: border-box;
+}
+
+#toast-container > .toast-success {
+  background-color: $peliculiando-green-light;
+}

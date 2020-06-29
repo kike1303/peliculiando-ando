@@ -1,0 +1,49 @@
+@import "app.variables";
+
+.form-container {
+  padding: 20px 80px;
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background-color: $peliculiando-blue-dark;
+      border-color: $peliculiando-blue-dark;
+
+      &:hover,
+      &:active {
+        background-color: $peliculiando-blue-light;
+        border-color: $peliculiando-blue-light;
+      }
+    }
+
+    .button-disable {
+      background-color: $peliculiando-gray;
+      border-color: $peliculiando-gray;
+
+      &:hover,
+      &:active {
+        background-color: $peliculiando-gray;
+        border-color: $peliculiando-gray;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
+}
+.ui-dialog {
+  width: 500px;
+}
+
+body .ui-dialog .ui-dialog-titlebar {
+  background-color: $peliculiando-blue-dark;
+  color: white;
+  border-color: $peliculiando-blue-dark;
+}
+
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+  color: white;
+}

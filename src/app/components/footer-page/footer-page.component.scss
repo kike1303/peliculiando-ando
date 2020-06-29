@@ -1,0 +1,21 @@
+@import "app.variables";
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 180px;
+  width: 100%;
+  background-color: $peliculiando-gray;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer-content {
+    padding: 20px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

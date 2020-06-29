@@ -1,0 +1,27 @@
+.movies-container {
+  padding: 30px 15px;
+
+  nav {
+    min-height: 72px;
+
+    ul {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 845px) {
+      justify-content: center;
+      ul {
+        margin: 20px;
+      }
+    }
+  }
+
+  .page-link {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 576px) {
+    .card-mobile {
+      padding: 0 90px;
+    }
+  }
+}

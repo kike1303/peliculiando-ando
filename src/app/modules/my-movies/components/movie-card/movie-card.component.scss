@@ -1,0 +1,49 @@
+@import "app.variables";
+
+.movie-card {
+  > div {
+    margin: 24px 0;
+  }
+
+  img {
+    height: 250px;
+  }
+
+  .details-movie-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    i {
+      font-size: 25px;
+      padding-top: 4px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .heart-fav-icon {
+      color: red;
+    }
+
+    .button-movie-details {
+      border-radius: 100%;
+      background-color: white;
+      color: $peliculiando-green-light;
+      border-color: $peliculiando-green-light;
+
+      &:hover {
+        border-color: $peliculiando-green-light;
+        background-color: $peliculiando-green-light;
+      }
+    }
+  }
+
+  .ui-card-title {
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+}

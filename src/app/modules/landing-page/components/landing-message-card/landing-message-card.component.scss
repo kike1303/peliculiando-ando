@@ -1,0 +1,20 @@
+@import "app.variables";
+
+.landing-message-card {
+  height: 300px;
+  max-width: 100%;
+  border-top: 1px solid $peliculiando-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    color: white;
+    background-color: $peliculiando-blue-light;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $peliculiando-blue-dark;
+    }
+  }
+}

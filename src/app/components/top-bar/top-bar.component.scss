@@ -1,0 +1,81 @@
+@import "app.variables";
+
+.layout-topbar {
+  background-color: $peliculiando-blue-dark;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  height: 64px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+
+    margin-left: 25px;
+
+    img {
+      height: 42px;
+    }
+
+    @media screen and (max-width: 530px) {
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 390px) {
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+  }
+
+  .user-button {
+    margin-right: 24px;
+    > div {
+      height: 100%;
+    }
+  }
+}
+
+// Overwriting PrimeNG styles
+body .ui-button.ui-state-default.ui-button-secondary {
+  height: 100%;
+  margin-right: 24px;
+  color: white;
+  border-color: $peliculiando-blue-dark;
+  background-color: $peliculiando-blue-dark;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary:enabled:hover {
+  background-color: $peliculiando-blue-light;
+  border-color: $peliculiando-blue-light;
+  color: white;
+}
+
+body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default,
+body
+  .ui-buttonset.ui-button-secondary
+  > .ui-button.ui-state-default:enabled:hover {
+  height: 100%;
+  background-color: $peliculiando-blue-dark;
+  border-color: $peliculiando-blue-dark;
+  color: white;
+}
+
+body
+  .ui-buttonset.ui-button-secondary
+  > .ui-button.ui-state-default:enabled:focus {
+  box-shadow: none;
+}

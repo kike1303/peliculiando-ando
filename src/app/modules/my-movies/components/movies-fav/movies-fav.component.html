@@ -1,0 +1,27 @@
+<div class="container movies-fav-container">
+  <nav class="navbar navbar-light bg-light search-bar">
+    <span class="navbar-brand mb-0 h1"
+      >Mis películas favoritas <i class="pi pi-heart heart-icon"></i>
+    </span>
+  </nav>
+
+  <app-message-card
+    [message]="noFavMessage"
+    *ngIf="!myFavMovies?.length"
+  ></app-message-card>
+
+  <p-carousel
+    [value]="myFavMovies"
+    [numVisible]="4"
+    [numScroll]="3"
+    [circular]="false"
+    [responsiveOptions]="responsiveOptions"
+    *ngIf="myFavMovies?.length"
+  >
+    <ng-template let-movie pTemplate="item">
+      <div class="movie-fav-card">
+        <app-movie-card [movieInfo]="movie"></app-movie-card>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

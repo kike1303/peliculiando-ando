@@ -1,0 +1,23 @@
+<p-dialog
+  [header]="movieDetails?.Title"
+  [(visible)]="displayModal"
+  (onHide)="closeMovieDetailsModal()"
+  [modal]="true"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+  class="movie-details-container"
+>
+  <div class="image-container">
+    <img [src]="movieDetails?.Poster" />
+  </div>
+
+  <table class="table table-striped">
+    <tbody>
+      <tr *ngFor="let key of movieDetailsList">
+        <th scope="row">{{ key }}</th>
+        <td>{{ movieDetails ? movieDetails[key] : "N/A" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</p-dialog>

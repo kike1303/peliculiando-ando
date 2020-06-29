@@ -1,0 +1,20 @@
+<header class="layout-topbar">
+  <a class="logo" href="#/">
+    <img src="assets/images/peliculiando-logo.png" alt="" />
+  </a>
+  <button
+    pButton
+    type="button"
+    label="Login"
+    class="ui-button-secondary button-login"
+    (click)="openLoginModal()"
+    *ngIf="showLoginButton"
+  ></button>
+  <p-splitButton
+    [label]="'Hola ' + userName"
+    [model]="items"
+    styleClass="ui-button-secondary"
+    class="user-button"
+    *ngIf="!showLoginButton"
+  ></p-splitButton>
+</header>

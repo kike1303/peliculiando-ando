@@ -1,0 +1,23 @@
+<p-card
+  [header]="movieInfo.Title"
+  [subheader]="'Year: ' + movieInfo.Year"
+  class="movie-card"
+>
+  <p-header>
+    <img src="Card" [src]="posterToShow" />
+  </p-header>
+  <div class="details-movie-container">
+    <i
+      class="pi pi-heart"
+      [class.heart-fav-icon]="isMovieFav"
+      (click)="checkMovieFav()"
+    ></i>
+    <button
+      pButton
+      class="button-movie-details"
+      type="button"
+      icon="pi pi-info"
+      (click)="showDetails()"
+    ></button>
+  </div>
+</p-card>

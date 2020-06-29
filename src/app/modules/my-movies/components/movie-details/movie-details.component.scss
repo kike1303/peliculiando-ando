@@ -1,0 +1,11 @@
+.movie-details-container {
+  .ui-dialog {
+    max-width: 800px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+}

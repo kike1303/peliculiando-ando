@@ -1,0 +1,44 @@
+<div class="container movies-container">
+  <nav class="navbar navbar-light bg-light search-bar">
+    <span class="navbar-brand mb-0 h1">Busca tu película</span>
+    <div class="form-inline">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        [(ngModel)]="searchMovie"
+        (ngModelChange)="searchingMovie()"
+      />
+    </div>
+    <ul class="pagination justify-content-end">
+      <li class="page-item" [class.disabled]="arrowLeftDisable()">
+        <a class="page-link" (click)="changePage(-1)" tabindex="-1">
+          <i class="pi pi-angle-left"></i>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link">{{ movieListPage }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="arrowRightDisable()">
+        <a class="page-link" (click)="changePage(1)">
+          <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <app-message-card
+    [message]="message"
+    *ngIf="!movieList?.length"
+  ></app-message-card>
+
+  <div class="row" *ngIf="movieList?.length">
+    <div
+      class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card-mobile"
+      *ngFor="let movie of movieList"
+    >
+      <app-movie-card [movieInfo]="movie"></app-movie-card>
+    </div>
+  </div>
+</div>

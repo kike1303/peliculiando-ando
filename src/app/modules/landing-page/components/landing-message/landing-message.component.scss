@@ -1,0 +1,50 @@
+@import "app.variables";
+
+.landing-message {
+  height: 300px;
+  max-width: 100%;
+  background-color: $peliculiando-blue-light;
+
+  .row {
+    height: 100%;
+
+    .landing-message-title,
+    .landing-message-content {
+      height: 90%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .landing-message-title-container {
+      border-right: 2px solid $peliculiando-gray;
+
+      .landing-message-title {
+        color: white;
+      }
+    }
+
+    .landing-message-content-container {
+      background-color: white;
+
+      .landing-message-content {
+        font-size: 24px;
+        padding: 40px;
+        color: $peliculiando-blue-light;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 600px;
+    .landing-message-title-container,
+    .landing-message-content-container {
+      height: 50%;
+    }
+  }
+}
