@@ -6,8 +6,8 @@ El resultado de la prueba se puede ver en el siguiente link -> [Peliculiando-and
 
 ### Dependencias del proyecto
 
-node versión 12.11.1 o superior -> [descarga node](https://nodejs.org/)
-angular/cli versión 9.1.4 -> [Angular CLI](https://github.com/angular/angular-cli)
+- node versión 12.11.1 o superior -> [descarga node](https://nodejs.org/)
+- angular/cli versión 9.1.4 -> [Angular CLI](https://github.com/angular/angular-cli)
 
 ### Instrucciones para despliegue en local
 
